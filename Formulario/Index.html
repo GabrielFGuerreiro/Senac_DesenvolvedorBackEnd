@@ -1,0 +1,71 @@
+<html> <!-- Início da página  -->
+
+<head> <!-- Configurações da página -->
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body> <!-- Corpo visual da página -->
+    <h1>Desenvolvedor Back End - 02</h1>
+    <form action="cadastrarAction.php" method="post">
+        <label for="nomeInput">Nome <span style="color: red;">*</span>:</label> 
+        <input class="inputs" class="text" type="text" name="nomeInput" id="nomeInput" required> <!--"Name" é BackEnd e "id" é FrontEnd-->
+
+        <label for="cpfInput">CPF <span style="color: red;">*</span>:</label>
+        <input class="inputs" class="text" type="text" name="cpfInput" id="cpfInput" required>
+
+        <label for="emailInput">E-mail <span style="color: red;">*</span>:</label>
+        <input class="inputs" class="text" type="email" name="emailInput" id="emailInput" required>
+
+        <label for="enderecoInput">Endereço:</label>
+        <input class="inputs" class="text" type="text" name="enderecoInput" id="enderecoInput">
+
+        <label for="cidadeInput">Cidade:</label>
+        <input class="inputs" class="text" type="text" name="cidadeInput" id="cidadeInput">
+
+        <label for="telefoneInput">Telefone:</label>
+        <input class="inputs" class="text" type="text" name="telefoneInput" id="telefoneInput">
+
+        <label for="celularInput">Celular | WhatsApp <span style="color: red;">*</span>:</label>
+        <input class="inputs" class="text" type="text" name="celularInput" id="celularInput" required>
+
+        <label for="interesseInput">Interesse:</label>
+        <input class="inputs" class="text" type="text" name="interesseInput" id="interesseInput">
+
+        <div class="btn">
+            <!-- <input id="cadastrarBtn" type="submit" value="Cadastrar Cliente"> -->
+            <button id="cadastrarBtn" onclick="cadastrar()" type="submit">
+                Cadastrar Cliente <i class="fas fa-floppy-disk"></i>
+            </button>
+            <button id="limparBtn" onclick="limpar()">
+                Limpar <i class="fas fa-eraser"></i>
+            </button>
+        </div>
+    </form>
+</body> <!-- Fim da página -->
+
+</html>
+
+<script>
+    function limpar()
+    {
+        const camposInputs = document.querySelectorAll(".inputs");
+        camposInputs.forEach(camposInputs => camposInputs.value = "");
+    }
+
+function cadastrar()
+{
+    var nome = document.getElementById("nomeInput");
+    var cpf = document.getElementById("cpfInput");
+    var email = document.getElementById("emailInput");
+    var cel = document.getElementById("celularInput");
+
+    if(!nome.value || !cpf.value || !email.value || !cel.value)   
+    {
+        
+    }
+    
+    
+}
+</script>
