@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="formContainer">
+        <h1>Cadastro de Torcedor</h1>
+        <form action="#" method="post">
+            <label for="inputNome">Nome Completo<span style="color: red;">*</span>:</label>
+            <input type="text" id="inputNome" name="inputNome">
+            <span class="msgObrigatoria" id="msgNome">Nome é Obrigatório</span>
+
+            <div class="radioContainerGenero">
+                <label for="inputGenero">Gênero:</label>
+                <input type="radio" id="inputGeneroM" name="inputGenero" value="m" onclick="MostraCampoOutro(this.value)">
+                <label for="inputGeneroM">Masculino</label>
+                <input type="radio" id="inputGeneroF" name="inputGenero" value="f" onclick="MostraCampoOutro(this.value)">
+                <label for="inputGeneroF">Feminino</label>
+                <input type="radio" id="inputGeneroO" name="inputGenero" value="o" onclick="MostraCampoOutro(this.value)" style="margin-bottom: 15px;">
+                <label for="inputGeneroO">Outro</label>
+                <input type="radio" id="inputGeneroND" name="inputGenero" value="nd" onclick="MostraCampoOutro(this.value)">
+                <label for="inputGeneroND">Prefiro Não Dizer</label>
+                <input type="text" id="inputTextGeneroO" name="inputTextGeneroO" placeholder="Especifique" hidden>
+            </div>
+
+            <label for="cpfInput">CPF<span style="color: red;">*</span>:</label>
+            <input type="text" name="cpfInput" id="cpfInput" oninput="FormatarCPF()" placeholder="000.000.000-00">
+            <span class="msgObrigatoria" id="msgCPF">CPF é Obrigatório</span>
+
+            <label for="selectFrequencia">Com que Frequência Você Vai ao Estádio?</label>
+            <select name="selectFrequencia" id="selectFrequencia">
+                <option value="">Selecione</option>
+                <option value="1">Nunca</option>
+                <option value="2">Raramente</option>
+                <option value="3">De Vez em Quando</option>
+                <option value="4">Frequentemente</option>
+                <option value="5">Sempre</option>
+             </select>
+
+            <div>
+                <label for="cbSocio">
+                    Sócio do Time?
+                    <input id="cbSocio" type="checkbox">
+                </label>                
+            </div>
+            <div>
+                <label for="cbCamisa">
+                    Possui Camisa Oficial do seu Time?
+                    <input id="cbCamisa" type="checkbox">
+                </label>
+            </div>
+
+             <label for="selectTimes">Qual seu Time do Coração?</label>
+             <div class="selectContainer">
+                 <select name="selectTimes" id="selectTimes">
+                     <option value="">Selecione</option>
+                     <option value="ch">Corinthians</option>
+                     <option value="s">Santos</option>
+                     <option value="b">Botafogo</option>
+                     <option value="p">Palmeiras</option>
+                     <option value="fg">Flamengo</option>
+                     <option value="sp">São Paulo</option>
+                     <option value="f">Fluminense</option>
+                     <option value="cz">Cruzeiro</option>
+                     <option value="v">Vasco</option>
+                     <option value="a">Atlético-MG</option>
+                     <option value="r">Red Bull Bragantino</option>
+                     <option value="m">Mirassol</option>
+                     <option value="g">Grêmio</option>
+                     <option value="i">Internacional</option>
+                     <option value="j">Juventude</option>
+                     <option value="bh">Bahia</option>
+                     <option value="c">Ceará</option>
+                     <option value="f">Fortaleza</option>
+                     <option value="st">Sport</option>
+                </select>
+                <span class="msgObrigatoria" id="msgTimes">Time é Obrigatório</span>
+            </div>
+            <button type="submit" onclick="//VerificaCampos()">Enviar Cadastro</button>
+            <button type="button" onclick="Limpar()" style="background-color: cadetblue;">Limpar</button>
+        </form>
+        <h1 class="infoNome">Desenvolvido por Gabriel Fernandes Guerreiro</h1>
+    </div>    
+</body>
+</html>
+
+<script>
+    function FormatarCPF()
+    {
+        var cpf = document.getElementById("cpfInput");
+        var cpfNums = cpf.value.replace(/\D/g, '');
+
+        var primeiraParte = cpfNums.substring(0, 3);
+        var segundaParte = cpfNums.substring(3, 6);
+        var terceiraParte = cpfNums.substring(6, 9);
+        var quartaParte = cpfNums.substring(9, 11);
+  
+        if(primeiraParte.length == 3) primeiraParte += ".";
+        if(segundaParte.length == 3) segundaParte += ".";
+        if(terceiraParte.length == 3) terceiraParte += "-";
+        if(quartaParte.length == 2) quartaParte;
+
+        var cpfFinal = `${primeiraParte}${segundaParte}${terceiraParte}${quartaParte}`;
+        cpf.value = cpfFinal;
+    }
+
+    function Limpar()
+    {
+        document.getElementById("inputNome").value = "";
+        document.getElementById("cpfInput").value = "";
+        document.getElementById("selectFrequencia").value = "";
+        document.getElementById("selectTimes").value = "";
+        document.getElementById("cbSocio").checked = false;
+        document.getElementById("cbCamisa").checked = false;
+
+        document.getElementById("inputGeneroM").checked = false;        
+        document.getElementById("inputGeneroF").checked = false;
+        document.getElementById("inputGeneroO").checked = false;
+        document.getElementById("inputGeneroND").checked = false;
+        MostraCampoOutro("");
+    }
+
+    function MostraCampoOutro(valor)
+    {
+        if(valor == "o")
+        {
+            document.getElementById("inputTextGeneroO").hidden = false;
+            document.querySelector(".formContainer").style.height = "600px";
+        }
+        else
+        {
+            document.getElementById("inputTextGeneroO").hidden = true;
+            document.querySelector(".formContainer").style.height = "550px";
+        }
+    }
+
+    // function VerificaCampos()
+    // {
+    //     var msgNome = document.getElementById("msgNome");    
+    //     var msgCPF = document.getElementById("msgCPF");
+    //     var msgTimes = document.getElementById("msgTimes");
+
+    //     if(msgNome == "" || msgNome == null)
+    //     {
+    //         msgNome.style.display = "block";
+    //     }
+    // }
+
+</script>
