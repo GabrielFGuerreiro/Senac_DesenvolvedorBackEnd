@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shih Tzu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>SHIH TZU</h1>
+    <h3>Clique na imagem!</h3>
+    <div class="containerImg">
+        <img id="imagemCao" src="\imagens\shitzu0.jpg" alt=" " onclick="mudarImg()">
+    </div>
+</body>
+</html>
+
+<script>
+    var cont = 0;
+    function mudarImg()
+    {
+        cont++;
+        if(cont > 3) cont = 0;
+        var imgCao = document.getElementById("imagemCao");
+        imgCao.src = `imagens/shitzu${cont}.jpg`;
+    }
+</script>

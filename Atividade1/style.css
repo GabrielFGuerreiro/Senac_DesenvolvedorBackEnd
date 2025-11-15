@@ -1,0 +1,23 @@
+h1 {
+    color: aqua;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+#imagemCao {
+    box-shadow: 0 0 10px rgb(0, 0, 0, 10);
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+} 
+
+.containerImg {
+    display: flex;
+    align-items: center;     
+    height: 300px;           
+}
