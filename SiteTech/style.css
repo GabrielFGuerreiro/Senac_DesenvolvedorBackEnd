@@ -1,0 +1,196 @@
+@font-face {
+  font-family: 'Oswald';
+  src: url('fonts/Oswald-ymXe.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    font-family: 'Oswald';
+    color: black;
+}
+
+header {
+    background-color: #2f8cd8;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-radius: 10px; */
+    height: 60px;
+    /* border: 1px solid black; */
+}
+
+.logo h1 {
+    margin: 0 0 0 20px;
+    font-size: 30px;
+    text-shadow: 0 0 10px black;
+}
+
+nav {
+    margin: 0 5px 0 0;
+}
+
+nav a {
+    font-size: 17px;
+    margin: 0 5px 0 0;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #f8d95c;
+    font-weight: bold;
+}
+
+.banner {
+    background: linear-gradient(to right, #a7c8fd, #3295f8);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.banner h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.botao {
+    background-color: #f8d95c;
+    color: #3295f8;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.servicos {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.servicos h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    width: 280px;
+    height: 130px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 7px rgb(0, 0, 0, 0,5);
+}
+
+.card h3 {
+    margin-top: 0px;
+    font-size: 22px;
+    color:#3295f8;
+}
+
+.card:hover {
+    box-shadow: 0 0 7px rgb(0, 0, 0, 1);
+}
+
+.card:hover h3 {
+    margin-top: -1px;
+    font-size: 23px;
+}
+
+.card:hover p {
+    font-size: 17px;
+}
+
+.contato {
+    background-color: white;
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+}
+
+form {
+    /* display: flex; */
+    flex-direction: column;
+    width: 300px;
+    gap: 5px;
+    margin-left: 5px;
+}
+ 
+
+label {
+    margin-top: 5px;
+}
+
+textarea {
+    vertical-align: middle;
+    resize: none;
+}
+
+.contato h2 {
+    text-align: center;
+    color: #0d47a1;
+}
+
+
+input[type="text"], input[type="email"], textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solic #ccc;
+    border-radius: 6px;
+}
+
+input[type="submit"] {
+    background-color: #0d47a1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #1565c0;
+}
+
+html, body {
+    background-color: rgb(235, 244, 255);
+}
+
+/* #cadastrarbtn {
+    margin: 0 auto;
+    height: 30px;
+    width: 150px;
+    background-color: rgb(57, 179, 20);
+    color: white ;
+    
+}
+
+#limparBtn {
+    margin: 0 auto;
+    height: 30px;
+    width: 100px;
+    background-color: rgb(20, 128, 179);
+    color: white;   
+}
+
+.btn {
+    margin-top: 10px;
+    display: flex;
+} */    

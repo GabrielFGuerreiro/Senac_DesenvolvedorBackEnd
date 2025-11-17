@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Tech <span style="color: #f8d95c;">Solutions</span></h1>
+        </div>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Serviços</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contato</a>
+        </nav>
+        <!-- <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXJ5d3Y1ODVrYmx0N3lncjcyODIxMTh2ZzlqdDAxZHhoZHY1aHlsMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zqZVwxcVDkwgR7QB4x/giphy.gif" alt=""> -->
+    </header>
+    <div class="banner">
+        <h2>Soluções Digitais para seu Negócio</h2>
+        <p>Desenvolvemos sistemas modernos e eficientes para impulsionar empresas na era digital.</p>
+        <a href="#" onclick="mostrar()" class="botao">Saiba mais</a>
+    </div>
+    <div class="servicos">
+        <h2>Nossos Serviços</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Desenvolvimento Web</h3>
+                <p>Sites e sistemas personalizados com design moderno e reponsivo.</p>
+            </div>
+            <div class="card">
+                <h3>Desenvolvimento Web</h3>
+                <p>Sites e sistemas personalizados com design moderno e reponsivo.</p>
+            </div>
+            <div class="card">
+                <h3>Desenvolvimento Web</h3>
+                <p>Sites e sistemas personalizados com design moderno e reponsivo.</p>
+            </div>
+        </div>
+    </div>
+    <div class="contato">
+        <h2>Fale Conosco</h2>
+        <form action="#" method="post">
+            <label for="nomeInput">Nome<span style="color: red;">*</span>:</label> 
+            <input class="text" type="text" name="nomeInput" id="nomeInput" placeholder="Digite seu Nome" required> <br><br>
+
+            <label for="emailInput">E-mail <span style="color: red;">*</span>:</label>
+            <input class="text" type="email" name="emailInput" id="emailInput" placeholder="Digite seu E-mail" required> <br><br>
+
+            <label for="mensagemInput">Mensagem <span style="color: red;">*</span>:</label>
+            <textarea class="text" name="mensagemInput" cols="25" rows="2" id="mensagemInput" placeholder="Digite sua Mensagem" required></textarea> <br><br>
+
+            <input type="submit" name="btnSubmit" id="emailInput" value="Enviar"> <br><br>
+
+        </form>
+    </div>
+
+        <img id="beast" src="https://tse4.mm.bing.net/th/id/OIP.96o5PaOxz9dH5Id1PRP05AHaHI?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="" hidden>
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
+
+<script>
+
+    function mostrar()
+    {
+        var botao = document.getElementById("beast");
+        if(botao.hidden == true)
+            document.getElementById("beast").hidden = false;
+        else
+            document.getElementById("beast").hidden = true;
+    }
+
+</script>
