@@ -18,7 +18,7 @@
 </head>
 <body>
     <div class="container">    
-        <h2>Digite uo Salário e o Valor da Compra</h2>
+        <h2>Digite o Salário e o Valor da Compra</h2>
         <form action="" method="post">
             <label for="numInput1">Salário</label>
             <input type="number" id="numInput1" min="0" name="numInput1" required>

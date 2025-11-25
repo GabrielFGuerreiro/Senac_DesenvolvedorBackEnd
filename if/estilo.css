@@ -4,9 +4,11 @@ body {
     color: #333;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: 0px;
+    gap: 50px;
 }
  
 .container {
@@ -76,4 +78,13 @@ button:hover {
 .mensagem.erro {
     background: #fff3cd;
     color: #856404;
+}
+
+.classPHP {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 320px;
 }
