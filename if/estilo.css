@@ -31,7 +31,9 @@ label {
     margin-bottom: 10px;
 }
  
-input[type="number"], select {
+input[type="number"],
+input[type="text"],
+select {
     width: 100%;
     padding: 8px;
     border-radius: 6px;
